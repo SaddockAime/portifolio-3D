@@ -38,7 +38,7 @@ export default function Home() {
             Saddock
           </h1>
           <p className="font-light text-foreground text-lg">
-            Meet the architec behind this portfolio
+            Meet the architect behind this portfolio
           </p>
         </div>
       </div>
