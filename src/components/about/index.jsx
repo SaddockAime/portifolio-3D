@@ -80,7 +80,7 @@ const AboutDetails = () => {
 
         <ItemLayout className={"col-span-full md:col-span-6 !p-0"}>
           <Link
-            href="https://github.com/codebucks27/Nextjs-contentlayer-blog"
+            href="https://github.com/SaddockAime/My-Brand-Saddock"
             target="_blank"
             className="w-full"
           >
