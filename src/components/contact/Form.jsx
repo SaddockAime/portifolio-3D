@@ -26,6 +26,7 @@ export default function Form() {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
 
   const sendEmail = (params) => {
@@ -51,9 +52,9 @@ export default function Form() {
               id: toastId,
             }
           );
+          reset(); // clear the form
         },
         (error) => {
-          // console.log("FAILED...", error.text);
           toast.error(
             "There was an error sending your message, please try again later!",
             {
