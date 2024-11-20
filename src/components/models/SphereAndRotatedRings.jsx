@@ -24,7 +24,7 @@ const SphereModel = React.memo(function SphereModel(props) {
   return (
     <group {...props} 
       ref={sphereRef}
-      scale={0.0055} // Reduced scale further
+      scale={0.0065} // Reduced scale further
       rotation={[0.2, 0, 0]}
       position={[0, 0.75, 0]} // Moved down slightly to center vertically
     >
