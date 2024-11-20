@@ -1,5 +1,5 @@
 import Image from "next/image";
-import bg from "../../../../public/background/Luxurious 3D Hallway with Glass Bookshelves and Ambient Lighting.png";
+import bg from "../../../../public/background/Elegant Library-Themed Hallway With Glass Bookshelf And Warm Lighting.png";
 import { projectsData } from "../../data";
 // import Staff from "@/components/models/Staff";
 import dynamic from "next/dynamic";
