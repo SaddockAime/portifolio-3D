@@ -6,20 +6,24 @@ const AboutDetails = () => {
   return (
     <section className="py-1 w-full">
       <div className="grid grid-cols-12 gap-4 xs:gap-6  md:gap-8 w-full">
-        <ItemLayout className={" col-span-full  flex-col items-start"}>
+        <ItemLayout
+          className={
+            " col-span-full  flex-col items-start"
+          }
+        >
           <h2 className="  text-xl md:text-2xl text-left w-full capitalize text-accent">
             Architect of Enchantment
           </h2>
-          <p className="font-light  text-xs sm:text-4xl md:text-base   ">
-            I am a Full Stack Developer with a background in Electronic and
-            Telecommunications Engineering. I enjoy building new web
-            applications and have a good eye for design and problem-solving. I
-            aim to create high-quality web applications that work well for both users, 
-            businesses and much more just name it and i will create it for you. 
-            I’m always looking to learn and grow, hoping to
-            become a Senior Software Developer and work on exciting projects.
-            Join me as I keep exploring new technologies to shape the future of
-            the web.
+          <p className="font-light  text-xs sm:text-sm md:text-base   ">
+            My journey in web development is powered by an array of mystical
+            tools and languages, with JavaScript casting the core of my
+            enchantments. I wield frameworks like React.js and Next.js with
+            precision, crafting seamless portals (websites) that connect realms
+            (users) across the digital universe. The ancient arts of the
+            Jamstack empower me to create fast, secure, and dynamic experiences,
+            while my design skills ensure every creation is not only functional
+            but visually captivating. Join me as I continue to explore new
+            spells and technologies to shape the future of the web.
           </p>
         </ItemLayout>
 
@@ -80,7 +84,7 @@ const AboutDetails = () => {
 
         <ItemLayout className={"col-span-full md:col-span-6 !p-0"}>
           <Link
-            href="https://github.com/SaddockAime/My-Brand-Saddock"
+            href="https://github.com/codebucks27/Nextjs-contentlayer-blog"
             target="_blank"
             className="w-full"
           >
