@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
 import bg from "../../../../public/background/Cozy Vintage Interior With Leather Seating And Industrial Decor.png";
 import Form from "@/components/contact/Form";
@@ -23,7 +24,7 @@ export default function Contact() {
           </h1>
           <p className="text-center font-light text-sm xs:text-base">
             Feel free to reach out if you have any questions, project inquiries,
-            or simply want to discuss your next digital venture. I'm always
+            or simply want to discuss your next digital venture. I &apos m always
             excited to connect with like-minded individuals and explore new
             opportunities. Let's work together to create something amazing!
           </p>
