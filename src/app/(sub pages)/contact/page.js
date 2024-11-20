@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
 import bg from "../../../../public/background/Cozy Vintage Interior With Leather Seating And Industrial Decor.png";
 import Form from "@/components/contact/Form";
@@ -13,7 +14,7 @@ export default function Contact() {
         alt="Next.js Portfolio website's contact page background image"
         priority
         sizes="100vw"
-        className="-z-50 fixed top-0 left-0 w-full h-full object-cover object-center opacity-25"
+        className="-z-50 fixed top-0 left-0 w-full h-full object-cover object-center opacity-40"
       />
 
       <article className="relative w-full flex flex-col items-center justify-center py-8 sm:py-0 space-y-8">
@@ -22,12 +23,10 @@ export default function Contact() {
             Contact the architect
           </h1>
           <p className="text-center font-light text-sm xs:text-base">
-            Step into the circle of enchantment and weave your words into the
-            fabric of the cosmos. Whether you seek to conjure collaborations,
-            unlock mysteries, or simply share tales of adventure, your messages
-            are treasured scrolls within this realm. Use the form below to send
-            your missives through the ethereal network, and await the whisper of
-            magic in response.
+            Feel free to reach out if you have any questions, project inquiries,
+            or simply want to discuss your next digital venture. I &apos m always
+            excited to connect with like-minded individuals and explore new
+            opportunities. Let's work together to create something amazing!
           </p>
         </div>
         <Form />
