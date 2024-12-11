@@ -37,8 +37,8 @@ export default function Home() {
           <h1 className="font-bold  text-6xl xs:text-7xl sm:text-8xl  lg:text-9xl text-accent">
             Saddock
           </h1>
-          <p className="font-light text-foreground text-lg">
-            Meet the architect behind this portfolio
+          <p className="font-light text-foreground text-2xl">
+            Here is a little about me
           </p>
         </div>
       </div>
