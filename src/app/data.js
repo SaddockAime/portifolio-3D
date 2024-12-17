@@ -51,7 +51,7 @@ export const BtnList = [
   },
   {
     label: "Resume",
-    link: "/CV Resume Saddock updated.pdf",
+    link: "/Saddock Kabandana resume template.docx.pdf",
     icon: "resume",
     newTab: true,
   },
