@@ -51,7 +51,7 @@ export const BtnList = [
   },
   {
     label: "Resume",
-    link: "/Saddock Kabandana resume template.docx.pdf",
+    link: "https://docs.google.com/document/d/1OTBl-HWUI2lEilBV4kumcB01Tl4CzzIh/edit?usp=sharing&ouid=113256908668863831445&rtpof=true&sd=true",
     icon: "resume",
     newTab: true,
   },
