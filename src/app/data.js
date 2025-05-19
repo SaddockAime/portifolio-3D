@@ -24,6 +24,34 @@ export const projectsData = [
     date: "2024-08-15",
     demoLink: "https://e-commerce-ninjas.netlify.app/",
   },
+  {
+    id: 2,
+    name: "Education Website",
+    description: "Pulse is a platform designed to handle ratings for the companies in the Ed-tech industries with the its first paying customer being Andela.",
+    date: "2024-12-16",
+    demoLink: "https://atlp-devpulse-fn.vercel.app/",
+  },
+  {
+    id: 3,
+    name: "Hope To Hope Website",
+    description: "Travel and Tour Website",
+    date: "2025-04-28",
+    demoLink: "https://hopetohope.netlify.app/",
+  },
+  {
+    id: 4,
+    name: "Agriconnect Rwanda",
+    description: "Agriculture and Farming Website",
+    date: "2025-05-13",
+    demoLink: "https://agri-tech-rw-fn-001.netlify.app/",
+  },
+  {
+    id:5,
+    name: "Education Website",
+    description: "ITS MIS Website",
+    date: "2025-02-20",
+    demoLink: "https://its-mis-fn.vercel.app/",
+  }
 ];
 
 export const BtnList = [
@@ -51,7 +79,7 @@ export const BtnList = [
   },
   {
     label: "Resume",
-    link: "https://docs.google.com/document/d/1OTBl-HWUI2lEilBV4kumcB01Tl4CzzIh/edit?usp=sharing&ouid=113256908668863831445&rtpof=true&sd=true",
+    link: "https://docs.google.com/document/d/1dZPdHn9J7bgdQrlIkEkq3J_FHNSATn_8mqJOLBzNAXw/edit?usp=sharing",
     icon: "resume",
     newTab: true,
   },
