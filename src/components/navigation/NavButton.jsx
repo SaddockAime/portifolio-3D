@@ -7,6 +7,8 @@ import {
   Phone,
   Twitter,
   User,
+  BookOpen,
+  MessageCircle,
 } from "lucide-react";
 import Link from "next/link";
 import React from "react";
@@ -32,6 +34,8 @@ const getIcon = (icon) => {
       return <Twitter className="w-full h-auto" strokeWidth={1.5} />;
     case "resume":
       return <NotebookText className="w-full h-auto" strokeWidth={1.5} />;
+    case "blogs":
+      return <BookOpen className="w-full h-auto" strokeWidth={1.5} />;
 
     default:
       return <Home className="w-full h-auto" strokeWidth={1.5} />;
