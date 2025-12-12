@@ -1,0 +1,15 @@
+name: Deployment to Andasy
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    name: Deploy App
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: quarksgroup/andasy-action@main
+        env:
+          # Set access token
+          ANDASY_ACCESS_TOKEN: ${{ secrets.ANDASY_ACCESS_TOKEN }}

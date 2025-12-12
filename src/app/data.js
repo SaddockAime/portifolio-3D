@@ -51,6 +51,13 @@ export const projectsData = [
     description: "ITS MIS Website",
     date: "2025-02-20",
     demoLink: "https://its-mis-fn.vercel.app/",
+  },
+  {
+    id:6,
+    name: "Leave Management And HR System",
+    description: "HR Management System for Employees and Employers",
+    date: "2025-10-05",
+    demoLink: "https://lms-hr.genesiscodeworks.com/",
   }
 ];
 
