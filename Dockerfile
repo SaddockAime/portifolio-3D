@@ -40,6 +40,9 @@ FROM base
 # Copy built application
 COPY --from=build /app /app
 
+# Make the entrypoint script executable
+RUN chmod +x /app/docker-entrypoint.js
+
 # Entrypoint sets up the container.
 ENTRYPOINT [ "/app/docker-entrypoint.js" ]
 
