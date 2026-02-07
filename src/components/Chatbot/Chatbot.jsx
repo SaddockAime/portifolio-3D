@@ -36,29 +36,43 @@ const Chatbot = () => {
 
 
 
-  const getBotResponse = (userMessage) => {
-    const lowerMessage = userMessage.toLowerCase();
-    
-    // Check for greetings
-    if (lowerMessage.includes("hello") || lowerMessage.includes("hi") || lowerMessage.includes("hey")) {
-      return greetings[Math.floor(Math.random() * greetings.length)];
-    }
+  const getBotResponse = async (userMessage, conversationHistory) => {
+    try {
+      console.log("Sending message to API route...");
 
-    // Check for thanks
-    if (lowerMessage.includes("thank") || lowerMessage.includes("thanks")) {
-      return thanks[Math.floor(Math.random() * thanks.length)];
-    }
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          message: userMessage,
+          conversationHistory: conversationHistory,
+        }),
+      });
 
-    // Check knowledge base
-    for (const [category, data] of Object.entries(chatbotKnowledgeBase)) {
-      if (data.keywords.some(keyword => lowerMessage.includes(keyword))) {
-        const randomResponse = data.responses[Math.floor(Math.random() * data.responses.length)];
-        return randomResponse;
+      console.log("Response status:", response.status);
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        console.error("API error:", errorData);
+        
+        if (response.status === 500) {
+          return `❌ Server error: ${errorData.error || 'Unknown error'}`;
+        }
+        
+        return `❌ Error: ${errorData.error || 'Failed to get response'}`;
       }
-    }
 
-    // Default responses for unknown questions
-    return defaultResponses[Math.floor(Math.random() * defaultResponses.length)];
+      const data = await response.json();
+      console.log("API response received:", data);
+
+      return data.reply || "I'm having trouble generating a response right now.";
+
+    } catch (error) {
+      console.error("Chat error:", error);
+      return `❌ Connection error: ${error.message}. Please check your internet connection.`;
+    }
   };
 
   const handleSendMessage = async () => {
@@ -71,28 +85,43 @@ const Chatbot = () => {
       timestamp: new Date(),
     };
 
+    const currentInput = inputValue;
     setMessages(prev => [...prev, userMessage]);
     setInputValue("");
     setIsTyping(true);
     setShowQuickQuestions(false);
 
-    // Simulate typing delay
-    setTimeout(() => {
+    try {
+      // Get AI response with conversation history
+      const responseText = await getBotResponse(currentInput, messages);
+      
       const botResponse = {
         id: Date.now() + 1,
         type: "bot",
-        content: getBotResponse(inputValue),
+        content: responseText,
         timestamp: new Date(),
       };
 
       setMessages(prev => [...prev, botResponse]);
+    } catch (error) {
+      const errorResponse = {
+        id: Date.now() + 1,
+        type: "bot",
+        content: "Sorry, I encountered an error. Please try again!",
+        timestamp: new Date(),
+      };
+      setMessages(prev => [...prev, errorResponse]);
+    } finally {
       setIsTyping(false);
-    }, 1000);
+    }
   };
 
-  const handleQuickQuestion = (question) => {
+  const handleQuickQuestion = async (question) => {
     setInputValue(question);
-    handleSendMessage();
+    // Small delay to show the question in the input before sending
+    setTimeout(() => {
+      handleSendMessage();
+    }, 100);
   };
 
   const handleKeyPress = (e) => {

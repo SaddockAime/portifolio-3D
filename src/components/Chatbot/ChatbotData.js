@@ -2,10 +2,10 @@ export const chatbotKnowledgeBase = {
   "saddock": {
     keywords: ["saddock", "about", "who", "developer", "portfolio", "kabandana"],
     responses: [
-      "Saddock Kabandana is a full-stack developer with expertise in modern web technologies. He specializes in React, Next.js, Three.js, and has built various projects including e-commerce platforms, educational websites, and travel applications.",
-      "Saddock is passionate about creating innovative web solutions and has experience with both frontend and backend development. He's currently working on projects that showcase his skills in 3D web development and modern UI/UX design.",
+      "Saddock Kabandana is a full-stack developer with strong expertise in backend technologies like Node.js and NestJS with TypeScript, and frontend frameworks including Next.js and Vue.js. He also specializes in Three.js for 3D web development.",
+      "Saddock is passionate about creating innovative web solutions with a focus on scalable backend systems using Node.js and NestJS, paired with modern frontend frameworks like Next.js and Vue. He's built various projects including e-commerce platforms, educational websites, and travel applications.",
       "You can find more about Saddock on his GitHub, LinkedIn, and Twitter profiles. He's always open to new opportunities and collaborations!",
-      "Saddock is a Rwandan developer who loves creating beautiful and functional web applications. He has a strong background in both frontend and backend technologies."
+      "Saddock is a Rwandan developer who loves creating beautiful and functional web applications. He has a strong background in both backend development (Node.js, NestJS with TypeScript) and frontend technologies (Next.js, Vue.js)."
     ]
   },
   "three.js": {
@@ -30,10 +30,46 @@ export const chatbotKnowledgeBase = {
   "next.js": {
     keywords: ["next.js", "nextjs", "framework", "ssr", "ssg"],
     responses: [
-      "Next.js is a React framework that provides features like server-side rendering, static site generation, API routes, and file-based routing out of the box.",
-      "Next.js is great for SEO, performance, and developer experience. It's used by many companies for production applications.",
+      "Next.js is a React framework that provides features like server-side rendering, static site generation, API routes, and file-based routing out of the box. Saddock specializes in Next.js for building high-performance frontend applications.",
+      "Next.js is great for SEO, performance, and developer experience. It's used by many companies for production applications and is one of Saddock's primary frontend frameworks.",
       "This portfolio uses Next.js 14 with the App Router, which provides better performance and developer experience compared to the Pages Router.",
-      "Next.js offers automatic code splitting, optimized images, and built-in performance optimizations that make web applications faster and more efficient."
+      "Next.js offers automatic code splitting, optimized images, and built-in performance optimizations that make web applications faster and more efficient. Saddock leverages Next.js extensively in his projects."
+    ]
+  },
+  "vue": {
+    keywords: ["vue", "vue.js", "vuejs", "vue framework"],
+    responses: [
+      "Vue.js is a progressive JavaScript framework for building user interfaces. Saddock uses Vue.js alongside Next.js as one of his core frontend technologies for creating reactive and component-based applications.",
+      "Vue.js is known for its gentle learning curve, excellent documentation, and flexibility. It's used for building single-page applications and can be incrementally adopted into projects.",
+      "Vue offers features like reactive data binding, component composition, and a rich ecosystem including Vue Router and Vuex/Pinia for state management. Saddock leverages Vue.js for building modern, interactive user interfaces.",
+      "Vue.js provides an approachable, versatile, and performant framework for web development. It's one of Saddock's go-to choices for frontend development alongside Next.js."
+    ]
+  },
+  "node": {
+    keywords: ["node", "node.js", "nodejs", "backend", "server"],
+    responses: [
+      "Node.js is a JavaScript runtime built on Chrome's V8 engine for building server-side applications. Saddock specializes in Node.js for backend development, creating scalable and efficient server applications.",
+      "Node.js enables JavaScript to run on the server, making it possible to use the same language for both frontend and backend. Saddock uses Node.js extensively for building RESTful APIs and microservices.",
+      "With Node.js, Saddock builds fast, scalable network applications that handle concurrent connections efficiently. It's a core part of his backend technology stack.",
+      "Node.js has a vast ecosystem through npm and is perfect for building I/O-intensive applications, real-time services, and APIs. Saddock leverages it for robust backend solutions."
+    ]
+  },
+  "nestjs": {
+    keywords: ["nest", "nestjs", "nest.js", "nest framework"],
+    responses: [
+      "NestJS is a progressive Node.js framework built with TypeScript that uses Express under the hood. Saddock specializes in NestJS for building efficient, scalable server-side applications with a strong architectural foundation.",
+      "NestJS provides an out-of-the-box application architecture with TypeScript support, dependency injection, and a modular structure. Saddock uses NestJS to create maintainable and testable backend systems.",
+      "With NestJS, Saddock builds enterprise-grade server applications that follow SOLID principles and provide excellent developer experience through TypeScript and decorators.",
+      "NestJS combines elements of OOP, FP, and FRP, making it perfect for building scalable microservices and REST APIs. It's one of Saddock's primary backend frameworks alongside Node.js."
+    ]
+  },
+  "typescript": {
+    keywords: ["typescript", "ts", "typed javascript"],
+    responses: [
+      "TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. Saddock uses TypeScript extensively, especially with NestJS for backend development and in modern frontend applications.",
+      "TypeScript adds static typing to JavaScript, providing better tooling, catching errors at compile-time, and improving code maintainability. Saddock leverages TypeScript for both frontend and backend projects.",
+      "With TypeScript, Saddock writes more robust and self-documenting code. It's particularly valuable in large applications and when working with frameworks like NestJS.",
+      "TypeScript provides features like interfaces, generics, and advanced type inference that make development more efficient and less error-prone. It's a key part of Saddock's technology stack."
     ]
   },
   "projects": {
@@ -57,10 +93,10 @@ export const chatbotKnowledgeBase = {
   "skills": {
     keywords: ["skills", "technologies", "languages", "tools", "expertise"],
     responses: [
-      "Saddock's skills include React, Next.js, Three.js, Node.js, TypeScript, JavaScript, HTML, CSS, Tailwind CSS, and various other modern web technologies.",
-      "He has experience with both frontend and backend development, including databases, APIs, and deployment platforms.",
-      "His expertise also includes 3D web development, responsive design, performance optimization, and modern development practices.",
-      "Saddock is proficient in modern JavaScript frameworks, CSS-in-JS solutions, state management libraries, and various development tools and workflows."
+      "Saddock's backend skills include Node.js and NestJS with TypeScript for building scalable server-side applications. On the frontend, he excels with Next.js and Vue.js. He also has expertise in Three.js, Tailwind CSS, and various other modern web technologies.",
+      "His core competencies include: Backend - Node.js, NestJS with TypeScript; Frontend - Next.js, Vue.js; 3D Graphics - Three.js; Styling - Tailwind CSS. He has experience with databases, APIs, and deployment platforms.",
+      "Saddock specializes in backend development with Node.js and NestJS using TypeScript, and frontend development with Next.js and Vue.js. His expertise also includes 3D web development, responsive design, performance optimization, and modern development practices.",
+      "His technical stack includes Node.js and NestJS with TypeScript for backend development, Next.js and Vue.js for frontend applications, plus proficiency in Three.js, state management libraries, and various development tools and workflows."
     ]
   },
   "web development": {
@@ -112,13 +148,13 @@ export const chatbotKnowledgeBase = {
 
 export const quickQuestions = [
   "Tell me about Saddock",
-  "What is Three.js?",
+  "What are his backend skills?",
   "Show me the projects",
-  "How to contact?",
-  "What technologies does Saddock use?",
-  "Tell me about React",
-  "What is Next.js?",
-  "How to get started with web development?"
+  "What is NestJS?",
+  "What technologies does he use?",
+  "Tell me about Next.js and Vue",
+  "What is Node.js?",
+  "How to contact?"
 ];
 
 export const greetings = [

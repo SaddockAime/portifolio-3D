@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { useForm } from "react-hook-form";
-import emailjs from "@emailjs/browser";
 import { Toaster, toast } from "sonner";
 import { motion } from "framer-motion";
 
@@ -29,51 +28,34 @@ export default function Form() {
     reset,
   } = useForm();
 
-  const sendEmail = (params) => {
-    const toastId = toast.loading("Sending your message, please wait...");
+  const sendToWhatsApp = (data) => {
+    const toastId = toast.loading("Preparing your message for WhatsApp...");
 
-    emailjs
-      .send(
-        process.env.NEXT_PUBLIC_SERVICE_ID,
-        process.env.NEXT_PUBLIC_TEMPLATE_ID,
-        params,
+    // Format the message for WhatsApp
+    const message = `*New Portfolio Contact*%0A%0A*Name:* ${encodeURIComponent(data.name)}%0A*Email:* ${encodeURIComponent(data.email)}%0A%0A*Message:*%0A${encodeURIComponent(data.message)}`;
+
+    // WhatsApp number (include country code without + or spaces)
+    const whatsappNumber = "250788938717";
+    
+    // Create WhatsApp URL
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;
+
+    // Open WhatsApp in a new tab
+    setTimeout(() => {
+      window.open(whatsappURL, '_blank');
+      toast.success(
+        "Opening WhatsApp! Please send the message to complete your contact request.",
         {
-          publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
-          limitRate: {
-            throttle: 5000, // you can not send more then 1 email per 5 seconds
-          },
-        }
-      )
-      .then(
-        () => {
-          toast.success(
-            "I have received your message, I will get back to you soon!",
-            {
-              id: toastId,
-            }
-          );
-          reset(); // clear the form
-        },
-        (error) => {
-          toast.error(
-            "There was an error sending your message, please try again later!",
-            {
-              id: toastId,
-            }
-          );
+          id: toastId,
+          duration: 5000,
         }
       );
+      reset(); // clear the form
+    }, 500);
   };
 
   const onSubmit = (data) => {
-    const templateParams = {
-      to_name: "SaddockAime",
-      from_name: data.name,
-      reply_to: data.email,
-      message: data.message,
-    };
-
-    sendEmail(templateParams);
+    sendToWhatsApp(data);
   };
 
   return (
@@ -122,12 +104,12 @@ export default function Form() {
           {...register("message", {
             required: "This field is required!",
             maxLength: {
-              value: 500,
-              message: "Message should be less than 500 characters",
+              value: 5000,
+              message: "Message should be less than 5000 characters",
             },
             minLength: {
-              value: 50,
-              message: "Message should be more than 50 characters",
+              value: 5,
+              message: "Message should be more than 5 characters",
             },
           })}
           className="w-full p-2 rounded-md shadow-lg text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 custom-bg"
