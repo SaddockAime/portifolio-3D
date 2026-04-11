@@ -15,9 +15,7 @@ const AboutDetails = () => {
             Telecommunications Engineering. I enjoy building new web
             applications and have a good eye for design and problem-solving. I
             aim to create high-quality web applications that work well for both users, 
-            businesses and much more just name it and i will create it for you. 
-            I’m always looking to learn and grow, hoping to
-            become a Senior Software Developer and work on exciting projects.
+            businesses and much more just name it and i will create it for you.
             Join me as I keep exploring new technologies to shape the future of
             the web.
           </p>

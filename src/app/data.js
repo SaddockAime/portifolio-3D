@@ -36,7 +36,7 @@ export const projectsData = [
     name: "Hope To Hope Website",
     description: "Travel and Tour Website",
     date: "2025-04-28",
-    demoLink: "https://hopetohope.netlify.app/",
+    demoLink: "https://hopetohopeglobalsolutions.com/",
   },
   {
     id: 4,
@@ -57,7 +57,7 @@ export const projectsData = [
     name: "Leave Management And HR System",
     description: "HR Management System for Employees and Employers",
     date: "2025-10-05",
-    demoLink: "https://lms-hr.genesiscodeworks.com/",
+    demoLink: "https://hr-employees-management-fn.andasy.dev/",
   }
 ];
 
